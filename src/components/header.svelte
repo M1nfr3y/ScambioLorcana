@@ -1,6 +1,8 @@
 <script>
     import ModalAccount from "./modalAccount.svelte";
 
+   
+
 
   let showModal = false;
 
@@ -51,7 +53,7 @@
       </ul>
       <form class="d-flex">
         <input
-          class="form-control me-2"
+          class="form-control"
           type="search"
           placeholder="Search"
           aria-label="Search"
@@ -105,7 +107,9 @@
   </div>
 </nav>
 
-<ModalAccount {showModal}></ModalAccount>
+
+  <ModalAccount {showModal}></ModalAccount>
+
 
 <style>
   a {
