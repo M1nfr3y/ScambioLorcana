@@ -1,17 +1,13 @@
 <script>
-    import ModalAccount from "./modalAccount.svelte";
-
-   
-
+  import ModalAccount from "./modalAccount.svelte";
 
   let showModal = false;
 
   const handleModal = () => {
-    console.log(showModal)
+    console.log(showModal);
     showModal = !showModal;
-  }
+  };
 </script>
-
 
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
@@ -53,7 +49,7 @@
       </ul>
       <form class="d-flex">
         <input
-          class="form-control"
+          class="form-control text-center"
           type="search"
           placeholder="Search"
           aria-label="Search"
@@ -87,7 +83,10 @@
           ></path></svg
         ></button
       >
-      <button type="button" class="btn btn-link btn-personal" on:click={handleModal}
+      <button
+        type="button"
+        class="btn btn-link btn-personal"
+        on:click={handleModal}
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
@@ -107,9 +106,7 @@
   </div>
 </nav>
 
-
-  <ModalAccount {showModal}></ModalAccount>
-
+<ModalAccount {showModal}></ModalAccount>
 
 <style>
   a {
@@ -128,23 +125,20 @@
   .form-control {
     background-color: #d2b786;
     border-width: 0px;
-    position: absolute;
     text-align: center;
     border-radius: 18px;
-    width: 30%;
-    margin-left: -60%;
-    margin-top: -12px;
+    width: 100%;
   }
 
+  .d-flex{
+    margin-left: 20%;
+    margin-right: 35%;
+  }
   .bi-search {
     color: black;
-    position: absolute;
-    margin-left: -33%;
-    margin-top: -9px;
   }
-  
+
   /* .bi-person-circle{
     
   } */
-
 </style>
