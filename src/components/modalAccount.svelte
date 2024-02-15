@@ -4,24 +4,34 @@
     export let showModal = false;
 
     function slideIn(node, { delay = 0, duration = 400 }) {
-    return {
-      delay,
-      duration,
-      css: (t) => `
-        transform: translateX(${(1 - t) * 100}%); // Sposta il componente dall'alto verso il basso
+        return {
+            delay,
+            duration,
+            css: (t) => `
+        transform: translateX(${
+            (1 - t) * 100
+        }%); // Sposta il componente dall'alto verso il basso
         opacity: ${t};
-      `
-    };
-  }
-
+      `,
+        };
+    }
 </script>
 
 {#if showModal}
-
     <div class="backdrop" transition:fade>
         <div class="modalAccount" transition:slideIn={{ duration: 400 }}>
             <div class="account-section">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" /><path fill-rule="evenodd"d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                    ><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" /><path
+                        fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                    />
                 </svg>
                 <p>Silvia la mejo</p>
                 <div class="line"></div>
@@ -54,6 +64,7 @@
         height: 600px;
         text-align: center;
         background: #d2b786;
+
     }
 
     .actions {
@@ -86,9 +97,8 @@
     .separator {
         border-bottom: 1px solid white; /* Aggiungi una linea sottile bianca */
         margin-bottom: 10px; /* Spazio sotto la linea */
-        margin-left:3px;
-        margin-right:3px;
-        
+        margin-left: 3px;
+        margin-right: 3px;
     }
 
     .account-section {
@@ -109,7 +119,7 @@
         font-size: 20px;
     }
 
-        .line {
+    .line {
         width: 100%;
         height: 1px;
         background-color: white;

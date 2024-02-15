@@ -1,5 +1,5 @@
 <script>
-  import ModalAccount from "./modalAccount.svelte";
+  import ModalAccount from "../ModalAccount.svelte";
 
   let showModal = false;
 
@@ -106,7 +106,7 @@
   </div>
 </nav>
 
-<ModalAccount {showModal}></ModalAccount>
+<ModalAccount class="modalAccount" {showModal}></ModalAccount>
 
 <style>
   a {
@@ -134,11 +134,11 @@
     margin-left: 20%;
     margin-right: 35%;
   }
+
   .bi-search {
     color: black;
   }
 
-  /* .bi-person-circle{
-    
-  } */
+ 
+
 </style>
