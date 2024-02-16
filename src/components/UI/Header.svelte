@@ -1,5 +1,5 @@
 <script>
-  import ModalAccount from "../ModalAccount.svelte";
+  import ModalAccount from "../modalAccount.svelte";
 
   let showModal = false;
 
